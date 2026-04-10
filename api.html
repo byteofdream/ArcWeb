@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arc IDE - API</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">Arc IDE</div>
+      <nav class="links">
+        <a class="link" href="index.html">Home</a><a class="link" href="docs.html">Docs</a><a class="link active" href="api.html">API</a><a class="link" href="Extensions.html">Extensions</a><a class="link" href="FAQ.html">FAQ</a><a class="link" href="learn.html">Learn</a><a class="link" href="download.html">Download</a><a class="link" href="ru-ru/api.html">RU</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <h1 class="title">Bridge API</h1>
+      <p class="lead">The Arc bridge exposes native operations from C++ to JavaScript through QWebChannel with a small and clear API surface.</p>
+    </section>
+    <section class="section">
+      <h2>Design Principles</h2>
+      <p>The API is intentionally compact: simple file access, directory listing, and write support. This keeps the app predictable and secure while making extension development straightforward. All methods are available to the frontend runtime and can be composed into richer workflows.</p>
+    </section>
+    <section class="grid">
+      <article class="card"><h3>readFile(path)</h3><p>Reads local text files and returns UTF-8 content for editor models.</p></article>
+      <article class="card"><h3>writeFile(path, content)</h3><p>Persists model changes to disk with truncation and overwrite semantics.</p></article>
+      <article class="card"><h3>listFiles(path)</h3><p>Returns normalized tree data for the explorer and folder navigation.</p></article>
+    </section>
+  </main>
+  <footer class="wrap footer">Arc IDE API reference</footer>
+</body>
+</html>

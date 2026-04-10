@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arc IDE - Extensions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">Arc IDE</div>
+      <nav class="links">
+        <a class="link" href="index.html">Home</a><a class="link" href="docs.html">Docs</a><a class="link" href="api.html">API</a><a class="link active" href="Extensions.html">Extensions</a><a class="link" href="FAQ.html">FAQ</a><a class="link" href="learn.html">Learn</a><a class="link" href="download.html">Download</a><a class="link" href="ru-ru/Extensions.html">RU</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <h1 class="title">Extensions</h1>
+      <p class="lead">Create custom tools and UI upgrades by adding extension folders with runtime scripts and optional styles.</p>
+    </section>
+    <section class="section">
+      <h2>Extension Format</h2>
+      <p>Each extension contains a <code>manifest.json</code> file for metadata and a <code>main.js</code> entry script. On startup, Arc IDE discovers installed folders, loads manifests, and activates runtime modules with a lightweight API object.</p>
+    </section>
+    <section class="grid">
+      <article class="card"><h3>Simple Structure</h3><p>Minimal setup keeps extension authoring fast and easy to maintain.</p></article>
+      <article class="card"><h3>Activation Flow</h3><p>Load, validate, activate. Failing extensions are isolated without crashing the app.</p></article>
+      <article class="card"><h3>Capabilities</h3><p>Access Monaco, editor model state, bridge methods, and UI status actions.</p></article>
+    </section>
+  </main>
+  <footer class="wrap footer">Arc IDE extensions catalog</footer>
+</body>
+</html>
